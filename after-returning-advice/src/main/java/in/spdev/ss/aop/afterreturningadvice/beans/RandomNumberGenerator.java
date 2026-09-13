@@ -1,7 +1,6 @@
 package in.spdev.ss.aop.afterreturningadvice.beans;
 
 import java.util.Random;
-import java.util.UUID;
 
 public class RandomNumberGenerator {
     public int generateRandomNumber(){

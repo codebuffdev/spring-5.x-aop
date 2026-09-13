@@ -11,7 +11,7 @@ public class StaticPointcut extends StaticMethodMatcherPointcut {
         System.out.println(targetClass.getName());
         System.out.println(method.getName());
         if(method.getName() == "add")
-            return true;
+            return true; //apply for this method
         return false;
     }
 }

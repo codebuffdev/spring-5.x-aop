@@ -10,6 +10,7 @@ public class StaticPointcutTest {
     public static void main(String[] args) {
         ProxyFactory proxyFactory = new ProxyFactory();
         proxyFactory.setTarget(new Calculator());
+        // pass the pointcut , pass the advice
         proxyFactory.addAdvisors(new DefaultPointcutAdvisor(new StaticPointcut(), new Around()));
         Calculator calculatorProxy = (Calculator) proxyFactory.getProxy();
         double mul = calculatorProxy.add(10, 20);

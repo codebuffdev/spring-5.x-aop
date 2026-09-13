@@ -9,7 +9,10 @@ public class MethodBeforeAdviceTest {
         ProxyFactory proxyFactory = new ProxyFactory();
         proxyFactory.setTarget(new LoanApprover());
         proxyFactory.addAdvice(new AuditAdvice());
+
+        // get the proxy of target class
         LoanApprover loanApprover = (LoanApprover) proxyFactory.getProxy();
-        loanApprover.approveLoan(1022l);
+        boolean approveLoan = loanApprover.approveLoan(1022L);
+        System.out.println("is Loan approved = " + approveLoan);
     }
 }
